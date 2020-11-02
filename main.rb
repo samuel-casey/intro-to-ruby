@@ -95,12 +95,126 @@ def square (num)
   Math.sqrt(num).to_i**2
 end
 
-puts square(2)
+# puts square(2)
 
 def square? (num)
   Math.sqrt(num).to_i**2 == num
 end
 
-puts square (2)
+# puts square (2)
 
 ## reverse a string of text algo
+
+# REVERSE A STRING OF TEXT
+
+# Write a method called reverse_string that takes in a string and prints the string in reversed order
+
+# Methods in ruby are written as follows: 
+#  - def is used instead of function
+#  - there are no curly braces
+#  - the mehtod is closed using the end keyword
+#  - a single parameter can be defined using a space
+
+# METHOD IS REALLY A FUNCTION IN JS
+def method_name param_name
+  
+end
+
+# Experiment with all of the following looping constructs
+
+# .times
+# .upto 
+# .downto
+
+# Bonus Method
+# .each (array specific and might require some research) 
+
+
+# The following variables can be used for each solution
+word = 'cat'
+rev_word = ''
+
+# .times
+## psuedo
+def reverse_str word
+  rev_word = ''
+  (word.length).times do |i|
+    rev_word.prepend(word[i])
+  end
+  puts rev_word
+end
+
+# reverse_str word
+
+# .upto
+def rev_str_2 word
+  rev_word = ''
+  i = 0
+  i.upto(word.length - 1) do
+    char = word[i]
+    rev_word.prepend(char)
+    i += 1
+  end
+  puts rev_word
+end
+
+# puts rev_str_2 "Cat"
+
+
+# .downto
+def rev_str_3 word
+  rev_word = ''
+  num = word.size - 1
+  num.downto(0) do |i|
+    rev_word.concat(word[i])
+    i -= 1
+  end
+  puts rev_word
+end
+
+# puts rev_str_3 "CAt"
+
+# Bonus Method
+# .each
+def rev_str_4 word
+  rev_word = ''
+  word.split("").each do |char|
+    rev_word.prepend(char)
+  end
+  puts rev_word
+end
+
+# rev_str_4 "Kitty"
+
+# BONUS: Write a method called is_palindrome that will return true if a given input is a palindrome and false if it's not.
+
+
+# Input: 'radar'
+# Output: true
+
+# Input: 'ruby'
+# Output: false
+
+# Input: 'race car' or 'Race car' 
+# Output: true
+
+# MUST WRITE PSEUDOCODE FIRST
+
+## PSEUDOCODE
+
+# GET string
+# REVERSE string
+# if reversed string === string
+# return true
+# else return false
+
+def is_palindrome(word)
+  reversed_word = word.reverse
+  if reversed_word == word
+    return true
+  else
+    return false
+  end
+end
+
+puts is_palindrome("radar")
