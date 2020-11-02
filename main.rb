@@ -97,4 +97,10 @@ end
 
 puts square(2)
 
+def square? (num)
+  Math.sqrt(num).to_i**2 == num
+end
+
+puts square (2)
+
 ## reverse a string of text algo
