@@ -217,4 +217,42 @@ def is_palindrome(word)
   end
 end
 
-puts is_palindrome("radar")
+# puts is_palindrome("radar")
+
+# FIZZBUZZ in Ruby
+
+=begin
+# OUTPUT
+fizzbuzz
+1
+2
+fizz
+4
+buzz
+fizz
+7
+8
+fizz
+buzz
+11
+fizz
+13
+14
+fizzbuzz
+=end
+
+def fizz_buzz max_num
+    0.upto(max_num) do |i|
+        if i % 3 == 0 && i % 5 == 0
+            puts "fizzbuzz"
+        elsif i % 5 == 0
+            puts "buzz"
+        elsif i % 3 == 0
+            puts "fizz"
+        else
+            puts i
+        end
+    end
+end
+
+fizz_buzz 15
