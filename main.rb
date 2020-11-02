@@ -69,3 +69,32 @@ str.upcase!
 #### converts to integer
 # puts "5".to_i + 2 # => 7
 
+
+### Loops
+
+#### while
+# i = 3
+# while i < 10 do
+#   puts i += 1
+# end
+
+#### .upto (for substitute)
+# 1.upto(50) do |i|
+#     puts i
+# end
+
+
+#### .times (for substitute)
+# i = 0
+# 50.times do |i|
+#     i += 1
+#     puts i
+# end
+
+def square (num)
+  Math.sqrt(num).to_i**2
+end
+
+puts square(2)
+
+## reverse a string of text algo
